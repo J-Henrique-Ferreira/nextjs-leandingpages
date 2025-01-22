@@ -36,7 +36,6 @@ export default function MetodoAmericano() {
         <div className="container mx-auto flex justify-between items-center">
           <div className="text-2xl font-bold">TradeMax</div>
           <div className="space-x-4">
-            {/* <button className="px-4 py-2 text-sm bg-transparent border border-white rounded-full hover:bg-white hover:text-[#1e234c] transition duration-300">Login</button> */}
             <button className="px-4 py-2 text-sm bg-[#01e303] text-[#1e234c] font-semibold rounded-full hover:bg-opacity-90 transition duration-300">Cadastrar-se Agora</button>
           </div>
         </div>
@@ -49,9 +48,6 @@ export default function MetodoAmericano() {
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Transforme sua Vida com Day Trade!</h1>
               <p className="text-xl mb-8">Aprenda as estratégias que os traders de sucesso utilizam diariamente para obter resultados consistentes.</p>
               <button className="px-8 py-4 bg-[#01e303] text-[#1e234c] text-lg font-bold rounded-full hover:bg-opacity-90 transition duration-300 transform hover:scale-105">Acessar Agora</button>
-            </div>
-            <div className="md:w-1/2">
-              {/* <img src="./images/image.png" alt="Gráfico de trading" className="rounded-lg shadow-lg"> */}
             </div>
           </div>
         </section>
@@ -84,7 +80,7 @@ export default function MetodoAmericano() {
             <h2 className="text-3xl font-bold text-center mb-12">O que nossos alunos dizem</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <p className="mb-4">"Ganhei confiança no mercado e vi meu lucro crescer 200% em apenas 3 meses!"</p>
+                <p className="mb-4">&quot;Ganhei confiança no mercado e vi meu lucro crescer 200% em apenas 3 meses!&quot;</p>
                 <div className="flex items-center">
                   <div>
                     <div className="font-semibold">João Silva</div>
@@ -93,7 +89,7 @@ export default function MetodoAmericano() {
                 </div>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <p className="mb-4">"As estratégias da TradeMax mudaram completamente minha abordagem no day trade."</p>
+                <p className="mb-4">&quot;As estratégias da TradeMax mudaram completamente minha abordagem no day trade.&quot;</p>
                 <div className="flex items-center">
                   <div>
                     <div className="font-semibold">Maria Santos</div>
@@ -102,7 +98,7 @@ export default function MetodoAmericano() {
                 </div>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <p className="mb-4">"Finalmente consegui consistência nos meus resultados. Obrigado, TradeMax!"</p>
+                <p className="mb-4">&quot;Finalmente consegui consistência nos meus resultados. Obrigado, TradeMax!&quot;</p>
                 <div className="flex items-center">
                   <div>
                     <div className="font-semibold">Carlos Oliveira</div>
@@ -121,17 +117,11 @@ export default function MetodoAmericano() {
           </div>
           <div className="max-w-4xl mx-auto space-y-6">
             <details className="bg-gray-100 p-4 rounded-lg shadow-md">
-              <summary className="text-lg font-semibold text-gray-800 cursor-pointer">Este método realmente funciona?
-              </summary>
-              <p className="text-gray-600 mt-2">Sim! É um método testado e comprovado, com resultados reais e
-                garantidos.</p>
+              <summary className="text-lg font-semibold text-gray-800 cursor-pointer">Este método realmente funciona?</summary>
+              <p className="text-gray-600 mt-2">Sim! É um método testado e comprovado, com resultados reais e garantidos.</p>
             </details>
           </div>
-          {/* <div className="text-center mt-12">
-            <a href="#compra" className="cta-button">Elimine Suas Dúvidas e Compre Agora</a>
-          </div> */}
         </section>
-
 
         <section className="py-20 bg-[#1e234c] text-white text-center">
           <div className="container mx-auto px-4 md:px-6">
@@ -151,5 +141,5 @@ export default function MetodoAmericano() {
         </section>
       </main>
     </div>
-  )
+  );
 }
