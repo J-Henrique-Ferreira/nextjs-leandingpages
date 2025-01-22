@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 
-export default async function MetodoAmericano() {
+export default function MetodoAmericano() {
   useEffect(() => {
     // Certifique-se de que o código é executado apenas no cliente
     if (typeof window !== 'undefined') {
@@ -31,7 +31,7 @@ export default async function MetodoAmericano() {
   }, []);
 
   return (
-    <body className="font-sans bg-gray-100">
+    <div className="font-sans bg-gray-100">
       <header className="bg-[#1e234c] text-white p-4 md:p-6">
         <div className="container mx-auto flex justify-between items-center">
           <div className="text-2xl font-bold">TradeMax</div>
@@ -126,45 +126,6 @@ export default async function MetodoAmericano() {
               <p className="text-gray-600 mt-2">Sim! É um método testado e comprovado, com resultados reais e
                 garantidos.</p>
             </details>
-
-            <details className="bg-gray-100 p-4 rounded-lg shadow-md">
-              <summary className="text-lg font-semibold text-gray-800 cursor-pointer">Quantos dias para fazer efeito?
-              </summary>
-              <p className="text-gray-600 mt-2">Você vai sentir uma melhora na força da ereção logo nos primeiros 7 dias. Para chegar em em se efeito máximo levará em torno de 20 a 30 dias</p>
-            </details>
-
-            <details className="bg-gray-100 p-4 rounded-lg shadow-md">
-              <summary className="text-lg font-semibold text-gray-800 cursor-pointer">É medicamento? Precisa de receita?
-              </summary>
-              <p className="text-gray-600 mt-2">Não. Este método é completamente natural.</p>
-            </details>
-
-
-            <details className="bg-gray-100 p-4 rounded-lg shadow-md">
-              <summary className="text-lg font-semibold text-gray-800 cursor-pointer">Tem como fazer em casa?
-              </summary>
-              <p className="text-gray-600 mt-2">Sim. Este método é extemamente simples e você pode fazer do conforto da sa casa.</p>
-            </details>
-
-            <details className="bg-gray-100 p-4 rounded-lg shadow-md">
-              <summary className="text-lg font-semibold text-gray-800 cursor-pointer">Causa problemas no coração?
-              </summary>
-              <p className="text-gray-600 mt-2">Não. Por ser natural não existem riscos para a saude.</p>
-            </details>
-
-
-            <details className="bg-gray-100 p-4 rounded-lg shadow-md">
-              <summary className="text-lg font-semibold text-gray-800 cursor-pointer">Vou sentir mais energia no meu dia a dia também?
-              </summary>
-              <p className="text-gray-600 mt-2">Sim. Você vai se sentir como um super humano. Este método irá rejuvenescer sua saude sexual e por consequência uma grande melhora na qualidade de vida</p>
-            </details>
-
-
-            <details className="bg-gray-100 p-4 rounded-lg shadow-md">
-              <summary className="text-lg font-semibold text-gray-800 cursor-pointer">Por quanto tempo tenho acesso?
-              </summary>
-              <p className="text-gray-600 mt-2">Acesso infinito</p>
-            </details>
           </div>
           {/* <div className="text-center mt-12">
             <a href="#compra" className="cta-button">Elimine Suas Dúvidas e Compre Agora</a>
@@ -189,6 +150,6 @@ export default async function MetodoAmericano() {
           </div>
         </section>
       </main>
-    </body>
+    </div>
   )
 }
