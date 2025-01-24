@@ -92,7 +92,7 @@ export default function MetodoPrimitivoParaEcecoes() {
                         Você quer transar como um <strong>CAVALO</strong>?
                     </h2>
 
-                    <Image src="/images/metodo-primitivo-para-erecoes/positivas/cavalo2.jpg"
+                    <Image src="/images/metodo-primitivo-para-erecoes/positivas/cavalo3.jpg"
                         width={1000} height={1000}
                         alt="homem frustrado por ter impotência sexual"
                         className="mt-8 mx-auto w-full lg:rounded-lg border border-red-500 shadow-sm shadow-red-300"
