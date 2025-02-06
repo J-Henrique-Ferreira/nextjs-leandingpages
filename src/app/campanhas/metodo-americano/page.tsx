@@ -1,5 +1,13 @@
 "use client";
 import { useEffect } from "react";
+import { SectionReviews } from "@/components/section-reviews";
+import { faqList, reviewsList } from "./constants";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 export default function MetodoAmericano() {
   useEffect(() => {
@@ -75,52 +83,42 @@ export default function MetodoAmericano() {
           </div>
         </section>
 
+
+        {  /* Depoimentos Section  */}
         <section className="py-20 bg-gray-100 text-gray-900">
-          <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold text-center mb-12">O que nossos alunos dizem</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <p className="mb-4">&quot;Ganhei confiança no mercado e vi meu lucro crescer 200% em apenas 3 meses!&quot;</p>
-                <div className="flex items-center">
-                  <div>
-                    <div className="font-semibold">João Silva</div>
-                    <div className="text-sm text-gray-600">Trader há 1 ano</div>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <p className="mb-4">&quot;As estratégias da TradeMax mudaram completamente minha abordagem no day trade.&quot;</p>
-                <div className="flex items-center">
-                  <div>
-                    <div className="font-semibold">Maria Santos</div>
-                    <div className="text-sm text-gray-600">Trader há 2 anos</div>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <p className="mb-4">&quot;Finalmente consegui consistência nos meus resultados. Obrigado, TradeMax!&quot;</p>
-                <div className="flex items-center">
-                  <div>
-                    <div className="font-semibold">Carlos Oliveira</div>
-                    <div className="text-sm text-gray-600">Trader há 6 meses</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-center mb-12">
+              O que nossos alunos dizem
+            </h2>
+            <p className="text-lg text-gray-600">
+              Histórias reais de transformação e sucesso.
+            </p>
           </div>
+          <SectionReviews reviewsList={reviewsList} />
         </section>
 
+        {/* FAQ Section */}
         <section className="py-16 px-4 bg-white">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Dúvidas Frequentes</h2>
-            <p className="text-lg text-gray-600">Respondemos às perguntas sobre o método.</p>
+            <p className="text-xl mb-8">Garantimos sua satisfação ou devolvemos seu dinheiro em até 30 dias.</p>
           </div>
           <div className="max-w-4xl mx-auto space-y-6">
-            <details className="bg-gray-100 p-4 rounded-lg shadow-md">
-              <summary className="text-lg font-semibold text-gray-800 cursor-pointer">Este método realmente funciona?</summary>
-              <p className="text-gray-600 mt-2">Sim! É um método testado e comprovado, com resultados reais e garantidos.</p>
-            </details>
+            {faqList.map((faq, index) =>
+              <Accordion
+                key={faq.question} type="single" collapsible>
+                <AccordionItem value={`item-${index}`} className="bg-gray-100 px-4 rounded-lg shadow-md">
+                  <AccordionTrigger className="text-lg font-semibold text-gray-800 cursor-pointer">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-600 mt-2 text-base">
+                    {faq.response}
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            )}
           </div>
+
         </section>
 
         <section className="py-20 bg-[#1e234c] text-white text-center">
