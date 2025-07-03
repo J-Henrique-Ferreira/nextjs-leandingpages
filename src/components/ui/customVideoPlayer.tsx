@@ -7,7 +7,7 @@ export default function CustomVideoPlayer() {
     const videoUrl = '/images/sua-renda-em-casa/video.mp4';
     const videoRef = useRef<HTMLVideoElement>(null);
     const [progress, setProgress] = useState(0);
-    const [isPaused, setIsPaused] = useState(false);
+    // const [isPaused, setIsPaused] = useState(false);
     const [hasInteracted, setHasInteracted] = useState(false);
 
     useEffect(() => {
@@ -52,10 +52,10 @@ export default function CustomVideoPlayer() {
 
         if (video.paused) {
             video.play();
-            setIsPaused(false);
+            // setIsPaused(false);
         } else {
             video.pause();
-            setIsPaused(true);
+            // setIsPaused(true);
         }
     };
 
