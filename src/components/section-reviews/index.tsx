@@ -6,6 +6,7 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
+import Image from "next/image";
 
 type ReviewData = {
     name: string;
@@ -35,11 +36,11 @@ export function SectionReviews({ reviewsList }: SectionReviewsProps) {
             {reviewsList.map((reviewDatas) =>
                 <Card key={reviewDatas.name} className=" rounded-lg shadow-lg items-center border-0">
                     <CardHeader className="flex flex-row justify-start gap-2 pb-2">
-                        {/* <Image src={reviewDatas.image}
+                        <Image src={reviewDatas.image}
                             width={300} height={300}
                             alt="homem frustrado por ter impotência sexual"
                             className="w-16 h-16 rounded-full mr-4 object-cover"
-                        /> */}
+                        />
                         <div>
                             <CardTitle className="text-lg font-semibold text-gray-800">
                                 {reviewDatas.name}

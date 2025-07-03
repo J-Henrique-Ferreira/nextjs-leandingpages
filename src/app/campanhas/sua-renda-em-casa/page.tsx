@@ -19,6 +19,11 @@ import {
 import Image from "next/image"
 import { useState } from "react"
 
+import { reviewsList, faqList } from "./constants";
+import { SectionReviews } from "@/components/section-reviews"
+import ReviewsVideosCarousel from "@/components/ui/reviewsVideosCarousel"
+
+
 export default function SuaRendaEmCasa() {
     const [openFaq, setOpenFaq] = useState(0)
     // 
@@ -130,7 +135,7 @@ export default function SuaRendaEmCasa() {
                     </div>
 
                     {/* CTA Button */}
-                    <a href="https://pay.kiwify.com.br/sUqnazH?afid=93ETP2aM" className="bg-gradient-to-r from-yellow-600 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-white font-bold text-lg md:text-xl px-8 py-4 rounded-full shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center gap-3 fixed bottom-3 z-20">
+                    <a href="https://pay.kiwify.com.br/sUqnazH?afid=93ETP2aM" className="bg-gradient-to-r from-yellow-600 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-white font-bold text-lg md:text-xl px-8 py-4 rounded-full shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center gap-3 fixed bottom-3 z-50">
                         OFERTA PROMOCIAONAL
                         <div className="bg-white bg-opacity-40 rounded-full p-2">
                             <svg width="24" height="24" viewBox="0 0 40 40" fill="none">
@@ -258,8 +263,8 @@ export default function SuaRendaEmCasa() {
             <section className="bg-gray-100 py-16">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
-                        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-900">
-                            O Treinamento <span className="font-black">Sua renda em casa</span> foi feito para você!
+                        <h2 className="text-3xl md:text-4xl text-center mb-8 text-gray-900">
+                            O Treinamento <span className="font-bold text-orange-500">Sua renda em casa</span> foi feito para você!
                             <br />
                             <br />
                             <span className="font-black">Não importa a sua:</span>
@@ -411,7 +416,7 @@ export default function SuaRendaEmCasa() {
                         <p className="text-2xl md:text-3xl font-bold mb-8">
                             De <s>R$3.997,00</s> Por apenas
                             <br />
-                            <span className="text-4xl md:text-5xl font-black text-green-800">12X de R$9,74</span>
+                            <span className="text-4xl md:text-5xl font-black text-green-800">12X de R$10,03</span>
                             <br />
                             Ou R$97,00 à vista!
                         </p>
@@ -484,29 +489,24 @@ export default function SuaRendaEmCasa() {
             </section>
 
             {/* Testimonials Section */}
-            <section className="py-16 bg-white">
-                <div className="container mx-auto px-4">
-                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
+            <section className="mb-10 overflow-hidden">
+                <div className="mx-auto px-4 bg-[#101010] pt-12 mb-12">
+                    <h2 className="text-3xl md:text-4xl font-bold text-center text-white">
                         O QUE OS ALUNOS <span className="font-black">ESTÃO DIZENDO.</span>
                     </h2>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-8">
-                        {testimonialVideos.map((videoId, index) => (
-                            <div key={index} className="aspect-video">
-                                <iframe
-                                    src={`https://www.youtube.com/embed/${videoId}`}
-                                    className="w-full h-full rounded-lg"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen
-                                />
-                            </div>
-                        ))}
+                    <div className="container mx-auto">
+                        <ReviewsVideosCarousel />
                     </div>
                 </div>
-            </section>
+
+                <div className="mx-2 lg:m-0">
+                    <SectionReviews reviewsList={reviewsList} />
+                </div>
+            </section >
 
             {/* FAQ Section */}
-            <section className="py-16 bg-gray-100">
+            <section className="py-16 bg-gray-100" >
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Perguntas frequentes</h2>
 
@@ -533,19 +533,36 @@ export default function SuaRendaEmCasa() {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Footer */}
-            <footer className="bg-[#101010] py-12">
-                imagens de metodos de pagamento e cta reforçada com audio ou vídeo
-            </footer>
+            < footer className="py-12 pb-40" >
+                <div className="flex flex-col container lg:max-w-4xl m-auto lg:flex-row bg-white rounded-xl">
+                    <div className='w-full lg:w-1/2'>
+                        <Image src="/images/sua-renda-em-casa/selos-footer.png"
+                            width={800} height={300}
+                            alt="metodos de pagamento"
+                            className="w-full object-cover mx-auto mb-4 rounded-lg"
+                        />
+                    </div>
+                    <div className='w-full lg:w-1/2 flex'>
+                        <Image src="/images/sua-renda-em-casa/metodos-pagamento.png"
+                            width={800} height={300}
+                            alt="metodos de pagamento"
+                            className="w-full object-cover mx-auto mb-4 rounded-lg"
+                        />
+                    </div>
+                </div>
+            </ footer >
 
             {/* Stars decoration */}
-            <div className="fixed bottom-4 left-4 flex gap-2">
-                {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
-                ))}
-            </div>
-        </div>
+            < div className="fixed bottom-4 left-4 flex gap-2" >
+                {
+                    [...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+                    ))
+                }
+            </ div>
+        </div >
     )
 }
