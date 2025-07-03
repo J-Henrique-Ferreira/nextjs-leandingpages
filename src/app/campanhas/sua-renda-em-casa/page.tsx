@@ -556,7 +556,7 @@ export default function SuaRendaEmCasa() {
             </ footer >
 
             {/* Stars decoration */}
-            < div className="fixed bottom-4 left-4 flex gap-2" >
+            < div className="fixed bottom-4 left-4 flex gap-2 hidden" >
                 {
                     [...Array(5)].map((_, i) => (
                         <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
