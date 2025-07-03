@@ -165,7 +165,11 @@ export default function VideoCarousel() {
           {videoData.map((video, index) => (
             <video
               key={index}
-              ref={(el) => (videoRefs.current[index] = el!)}
+              ref={(el: HTMLVideoElement | null) => {
+                if (el) {
+                  videoRefs.current[index] = el
+                }
+              }}
               src={video.src}
               className={`w-full h-full object-cover absolute transition-all duration-500 cursor-pointer ${index === currentIndex ? "opacity-100 scale-100 z-10" : "opacity-0 scale-95 z-0"
                 }`}
