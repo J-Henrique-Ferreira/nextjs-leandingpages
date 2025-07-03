@@ -1,0 +1,36 @@
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(to right, #ff5722, #ff9800);
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}    
+
+
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.zoom-button {
+animation: zoomInOut 1.8s infinite;
+transition: background-color 0.3s;
+}
+
+@keyframes zoomInOut {
+
+0%,
+100% {
+  transform: scale(1);
+}
+
+50% {
+  transform: scale(1.04);
+}
+}

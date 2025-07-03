@@ -106,8 +106,9 @@ export default function MetodoPrimitivoParaEcecoes() {
                         Cuide de si mesmo e mostre ao mundo o melhor que você pode ser. Chega de se sentir impotente
                         <br />
                         <br />
-                        Garanta agora seu pau duro nunca e comece a aplicar o método hoje mesmo! Porque sua saúde masculina não é
-                        um luxo, é uma prioridade.
+                        Garanta agora seu pau duro mais duro que aos 15 anos e comece a aplicar o método hoje mesmo!
+
+                        Porque sua <strong>SAÚDE MASCULINA</strong> deve ser sua <strong>PRIORIDADE</strong> .
                         <br />
                         <br />
                         Seja a melhor versão de você. 👊💪
