@@ -375,7 +375,7 @@ export default function SuaRendaEmCasa() {
                                 />
                                 <h3 className="text-xl font-bold mb-3">BÔNUS ESPECIAL #02</h3>
                                 <p className="text-gray-700">
-                                    <strong>"Aprenda o caminho para fechar seus primeiros clientes em tempo recorde"</strong>
+                                    <strong>{`'Aprenda o caminho para fechar seus primeiros clientes em tempo recorde"`}</strong>
                                     <br />
                                     Você quer ter clientes que te pagam todos os meses prestando serviços? Neste bônus você entenderá como
                                     fechar cada vez mais clientes em tempo recorde.
