@@ -20,7 +20,7 @@ import { useState } from "react"
 
 export default function SuaRendaEmCasa() {
     const [openFaq, setOpenFaq] = useState(0)
-
+    // 
     const benefits = [
         { icon: Network, text: "Assista as aulas de onde quiser" },
         { icon: HandHeart, text: "Receba suporte exclusivo todos os dias" },
