@@ -19,7 +19,7 @@ import {
 import Image from "next/image"
 import { useState } from "react"
 
-import { reviewsList, faqList } from "./constants";
+import { reviewsList } from "./constants";
 import { SectionReviews } from "@/components/section-reviews"
 import ReviewsVideosCarousel from "@/components/ui/reviewsVideosCarousel"
 

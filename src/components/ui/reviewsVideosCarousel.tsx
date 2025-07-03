@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX } from "lucide-react"
+import { ChevronLeft, ChevronRight, Volume2, VolumeX } from "lucide-react"
 
 const videoData = [
   { src: "/images/sua-renda-em-casa/depoimentos/1.mp4", title: "Alunos superando suas espectativas" },
@@ -32,17 +32,17 @@ export default function VideoCarousel() {
   }, [])
 
   // Evento de clique no vídeo (apenas para play/pause)
-  const handleVideoClick = () => {
-    const currentVideo = videoRefs.current[currentIndex]
+  // const handleVideoClick = () => {
+  //   const currentVideo = videoRefs.current[currentIndex]
 
-    if (currentVideo) {
-      if (isPlaying) {
-        currentVideo.pause()
-      } else {
-        currentVideo.play().catch(() => { })
-      }
-    }
-  }
+  //   if (currentVideo) {
+  //     if (isPlaying) {
+  //       currentVideo.pause()
+  //     } else {
+  //       currentVideo.play().catch(() => { })
+  //     }
+  //   }
+  // }
 
   // Reproduzir/Pausar vídeos conforme visibilidade
   useEffect(() => {
@@ -133,9 +133,9 @@ export default function VideoCarousel() {
     setTimeout(() => setIsTransitioning(false), 300)
   }
 
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying)
-  }
+  // const togglePlayPause = () => {
+  // setIsPlaying(!isPlaying)
+  // }
 
   const toggleMute = () => {
     const currentVideo = videoRefs.current[currentIndex]
