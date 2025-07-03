@@ -372,7 +372,8 @@ export default function SuaRendaEmCasa() {
                                     width={361} height={513}
                                     alt="Liberdade de Tempo"
                                     className="w-full max-w-sm mx-auto mb-4 rounded-lg"
-                                />                                <h3 className="text-xl font-bold mb-3">BÔNUS ESPECIAL #02</h3>
+                                />
+                                <h3 className="text-xl font-bold mb-3">BÔNUS ESPECIAL #02</h3>
                                 <p className="text-gray-700">
                                     <strong>"Aprenda o caminho para fechar seus primeiros clientes em tempo recorde"</strong>
                                     <br />
@@ -400,7 +401,6 @@ export default function SuaRendaEmCasa() {
             <section className="bg-gradient-to-br from-yellow-400 via-orange-500 to-red-500 py-16" id="oferta">
                 <div className="container mx-auto px-4">
                     <div className="max-w-2xl mx-auto text-center text-white">
-                        {/* <img src="/placeholder.svg?height=72&width=293" alt="Logo" className="h-16 mx-auto mb-6" /> */}
                         <Image src="/images/sua-renda-em-casa/logo.svg"
                             width={361}
                             height={513}
