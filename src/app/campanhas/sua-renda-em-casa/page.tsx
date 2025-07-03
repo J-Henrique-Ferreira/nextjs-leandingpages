@@ -69,7 +69,6 @@ export default function SuaRendaEmCasa() {
         },
     ]
 
-    const testimonialVideos = ["m2POK9C6MYw", "94vv40py55I", "uHZW96gjU2k", "I8OAvaDnVI4"]
 
     const faqItems = [
         {
