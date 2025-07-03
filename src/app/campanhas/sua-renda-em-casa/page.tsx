@@ -1,5 +1,6 @@
 "use client"
 
+import CustomVideoPlayer from "@/components/ui/customVideoPlayer"
 import {
     Star,
     Shield,
@@ -119,19 +120,18 @@ export default function SuaRendaEmCasa() {
 
                     {/* Video */}
                     <div className="w-full max-w-4xl mb-8">
-                        <div className="aspect-video bg-black rounded-lg overflow-hidden">
-                            <iframe
-                                src="https://www.youtube.com/embed/kq8K_CYZXGU"
-                                className="w-full h-full"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                            />
+                        <div
+                            className="aspect-video bg-black pb-1 rounded-2xl"
+                            style={{
+                                boxShadow: '1px 1px 99px 0px #a5a5a57a',
+                            }}>
+                            <CustomVideoPlayer />
                         </div>
                     </div>
 
                     {/* CTA Button */}
-                    <a href="https://pay.kiwify.com.br/sUqnazH?afid=93ETP2aM" className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-white font-bold text-lg md:text-xl px-8 py-4 rounded-full shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center gap-3">
-                        COMECE AGORA
+                    <a href="https://pay.kiwify.com.br/sUqnazH?afid=93ETP2aM" className="bg-gradient-to-r from-yellow-600 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-white font-bold text-lg md:text-xl px-8 py-4 rounded-full shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center gap-3 fixed bottom-3 z-20">
+                        OFERTA PROMOCIAONAL
                         <div className="bg-white bg-opacity-40 rounded-full p-2">
                             <svg width="24" height="24" viewBox="0 0 40 40" fill="none">
                                 <path
@@ -150,7 +150,7 @@ export default function SuaRendaEmCasa() {
             {/* Arrow Down Section */}
             <section className="bg-gray-100 pb-10">
                 <div className="container mx-auto px-4 text-center">
-                    <div className="flex justify-center mb-4 mt-[-7px]">
+                    <div className="flex justify-center mb-4 mt-[-9px]">
                         <svg width="123" height="37" viewBox="0 0 123 37" fill="none">
                             <path d="M60 36.5C33.5 36.5 33.5 7 0 7H122.5C88.5 7 83 36.5 60 36.5Z" fill="#101010" />
                             <path
