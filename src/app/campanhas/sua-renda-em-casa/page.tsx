@@ -22,6 +22,9 @@ import { useState } from "react"
 import { reviewsList } from "./constants";
 import { SectionReviews } from "@/components/section-reviews"
 import ReviewsVideosCarousel from "@/components/ui/reviewsVideosCarousel"
+import TopBarTimer from "@/components/ui/TabBarTimer"
+import UrgencyModal from "@/components/ui/urgencyModal"
+
 
 
 export default function SuaRendaEmCasa() {
@@ -33,7 +36,7 @@ export default function SuaRendaEmCasa() {
         { icon: DollarSign, text: "O passo a passo para vender todos os dias" },
         { icon: RefreshCw, text: "Estratégias para resultados rápidos" },
         { icon: Award, text: "Certificado de conclusão" },
-        { icon: Rocket, text: "acompanhamento até os resultados" },
+        { icon: Rocket, text: "Acompanhamento até os resultados" },
     ]
 
     const modules = [
@@ -94,8 +97,10 @@ export default function SuaRendaEmCasa() {
     return (
         <div className="min-h-screen bg-white font-sans">
             {/* Hero Section */}
+            <TopBarTimer />
+            <UrgencyModal />
             <section
-                className="min-h-screen bg-cover bg-center bg-no-repeat relative"
+                className="lg:min-h-screen py-5 lg:py-0 bg-cover bg-center bg-no-repeat relative"
                 style={{
                     background: `url('/images/sua-renda-em-casa/bg-image.png') no-repeat`,
                     backgroundSize: 'cover',
@@ -103,7 +108,7 @@ export default function SuaRendaEmCasa() {
                     backgroundRepeat: 'no-repeat',
                 }}
             >
-                <div className="container mx-auto px-4 py-8 flex flex-col items-center justify-center min-h-screen text-center text-white">
+                <div className="container mx-auto px-4 py-3 lg:py-8 flex flex-col items-center justify-center min-h-screen text-center text-white">
                     {/* Logo */}
                     <div className="mb-8">
                         <Image src="/images/sua-renda-em-casa/logo.svg"
@@ -134,37 +139,20 @@ export default function SuaRendaEmCasa() {
                     </div>
 
                     {/* CTA Button */}
-                    <a href="https://pay.kiwify.com.br/sUqnazH?afid=93ETP2aM" className="bg-gradient-to-r from-yellow-600 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-white font-bold text-lg md:text-xl px-8 py-4 rounded-full shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center gap-3 fixed bottom-3 z-50">
-                        OFERTA PROMOCIAONAL
-                        <div className="bg-white bg-opacity-40 rounded-full p-2">
-                            <svg width="24" height="24" viewBox="0 0 40 40" fill="none">
-                                <path
-                                    d="M11 20.5L30 20.5M30 20.5C26.5275 18.3044 24.8553 16.8295 22.6596 13.5M30 20.5C26.611 22.6576 24.9012 24.0787 22.6596 27.5"
-                                    stroke="white"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                />
-                            </svg>
-                        </div>
+                    <a href="https://pay.kiwify.com.br/sUqnazH?afid=93ETP2aM" className="bg-gradient-to-r from-yellow-600 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-white font-bold text-lg md:text-xl px-8 py-2 rounded-full shadow-lg transform hover:scale-105 flex items-center gap-3 fixed bottom-3 z-50 uppercase  animate-pulseGrow hover:scale-105 transition">
+                        Aproveite a oferta
+
                     </a>
                 </div>
             </section>
+
+
 
             {/* Arrow Down Section */}
             <section className="bg-gray-100 pb-10">
                 <div className="container mx-auto px-4 text-center">
                     <div className="flex justify-center mb-4 mt-[-9px]">
-                        <svg width="123" height="37" viewBox="0 0 123 37" fill="none">
-                            <path d="M60 36.5C33.5 36.5 33.5 7 0 7H122.5C88.5 7 83 36.5 60 36.5Z" fill="#101010" />
-                            <path
-                                d="M59.5 1V24.5M59.5 24.5C63.1071 19.0598 65.5301 16.4399 71 13M59.5 24.5C55.9554 19.1905 53.6207 16.5119 48 13"
-                                stroke="#F4BA23"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="123" height="37" viewBox="0 0 123 37" fill="none"><g id="Group 2"><path id="Vector" d="M60 36.5C33.5 36.5 33.5 7 0 7H122.5C88.5 7 83 36.5 60 36.5Z" fill="#101010"></path><path id="seta" d="M59.5 1V24.5M59.5 24.5C63.1071 19.0598 65.5301 16.4399 71 13M59.5 24.5C55.9554 19.1905 53.6207 16.5119 48 13" stroke="#F4BA23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
                     </div>
                     <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mt-6 mb-12">Com o treinamento você conseguirá</h2>
 
@@ -174,7 +162,7 @@ export default function SuaRendaEmCasa() {
                             <Image src="/images/sua-renda-em-casa/liberdade-financeira.png"
                                 width={361} height={513}
                                 alt="Liberdade Financeira"
-                                className="w-full max-w-sm mx-auto mb-4 rounded-lg"
+                                className="w-full max-w-sm mx-auto mb-4 rounded-lg border-orange-500 border-[3px] shadow-2xl"
                             />
 
                             <p className="text-lg font-medium text-gray-700">
@@ -185,7 +173,7 @@ export default function SuaRendaEmCasa() {
                             <Image src="/images/sua-renda-em-casa/liberdade-geografica.png"
                                 width={361} height={513}
                                 alt="Liberdade Geográfica"
-                                className="w-full max-w-sm mx-auto mb-4 rounded-lg"
+                                className="w-full max-w-sm mx-auto mb-4 rounded-lg border-orange-500 border-[3px] shadow-2xl"
                             />
 
                             <p className="text-lg font-medium text-gray-700">
@@ -196,64 +184,13 @@ export default function SuaRendaEmCasa() {
                             <Image src="/images/sua-renda-em-casa/liberdade-de-tempo.png"
                                 width={361} height={513}
                                 alt="Liberdade de Tempo"
-                                className="w-full max-w-sm mx-auto mb-4 rounded-lg"
+                                className="w-full max-w-sm mx-auto mb-4 rounded-lg border-orange-500 border-[3px] shadow-2xl"
                             />
 
                             <p className="text-lg font-medium text-gray-700">
                                 Nunca mais bata cartão e cumpra horário, seu negócio, suas regras!
                             </p>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Benefits Icons Section */}
-            <section className="bg-[#101010] py-16">
-                <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                        {benefits.map((benefit, index) => (
-                            <div key={index} className="flex items-center gap-4 text-white">
-                                <div className="bg-yellow-400 p-3 rounded-full">
-                                    <benefit.icon className="w-6 h-6 text-gray-900" />
-                                </div>
-                                <p className="text-sm md:text-base font-medium">{benefit.text}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Course Modules Section */}
-            <section className="py-16 bg-[#101010]">
-                <div className="container mx-auto px-4">
-                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
-                        Aqui está tudo o que você vai receber no Treinamento
-                    </h2>
-
-                    <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                        {modules.map((module, index) => (
-                            <div key={index} className="">
-                                <div className="relative">                                <Image
-                                    src={`/images/sua-renda-em-casa/modulos/${index + 1}.png`}
-                                    width={361} height={513}
-                                    alt="Liberdade de Tempo"
-                                    className="w-full max-w-sm mx-auto mb-4 rounded-lg"
-                                />
-
-                                    <Image
-                                        src={`/images/sua-renda-em-casa/play.svg`}
-                                        width={361} height={513}
-                                        alt="Liberdade de Tempo"
-                                        // cody, centralize o play
-                                        className="absolute z-10 w-14 h-14 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
-                                    />
-                                </div>
-                                <div className="p-6 w-full text-center">
-                                    <h3 className="text-2xl font-bold mb-3 text-yellow-500">{module.title}</h3>
-                                    <p className="text-white">{module.description}</p>
-                                </div>
-                            </div>
-                        ))}
                     </div>
                 </div>
             </section>
@@ -297,8 +234,43 @@ export default function SuaRendaEmCasa() {
                 </div>
             </section>
 
+            {/* Course Modules Section */}
+            <section className="py-16 bg-[#101010]">
+                <div className="container mx-auto px-4">
+                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+                        Aqui está tudo o que você vai receber no Treinamento
+                    </h2>
+
+                    <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                        {modules.map((module, index) => (
+                            <div key={index} className=" lg:max-w-[400px]">
+                                <div className="relative">                                <Image
+                                    src={`/images/sua-renda-em-casa/modulos/${index + 1}.png`}
+                                    width={361} height={513}
+                                    alt="Liberdade de Tempo"
+                                    className="w-full max-w-sm mx-auto mb-4 rounded-lg"
+                                />
+
+                                    <Image
+                                        src={`/images/sua-renda-em-casa/play.svg`}
+                                        width={361} height={513}
+                                        alt="Liberdade de Tempo"
+                                        // cody, centralize o play
+                                        className="absolute z-10 w-14 h-14 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
+                                    />
+                                </div>
+                                <div className="p-6 w-full text-center">
+                                    <h3 className="text-2xl font-bold mb-3 text-yellow-500">{module.title}</h3>
+                                    <p className="text-white">{module.description}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* Media Section */}
-            <section className="py-16 bg-white">
+            <section className="py-16 bg-white hidden">
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
                         O QUE A MÍDIA FALA DO MARKETING DIGITAL e de nós?
@@ -348,7 +320,7 @@ export default function SuaRendaEmCasa() {
             </section>
 
             {/* Bonus Section */}
-            <section className="bg-[#101010] py-16">
+            <section className="bg-[#101010] py-16 hidden">
                 <div className="container mx-auto px-4">
                     <div className="max-w-6xl mx-auto">
                         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
@@ -447,6 +419,22 @@ export default function SuaRendaEmCasa() {
                                 PIX
                             </p>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Benefits Icons Section */}
+            <section className="bg-[#101010] py-16">
+                <div className="container mx-auto px-4">
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                        {benefits.map((benefit, index) => (
+                            <div key={index} className="flex items-center gap-4 text-white">
+                                <div className="bg-yellow-400 p-3 rounded-full">
+                                    <benefit.icon className="w-6 h-6 text-gray-900" />
+                                </div>
+                                <p className="text-sm md:text-base font-medium">{benefit.text}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
